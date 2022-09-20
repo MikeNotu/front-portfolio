@@ -1,5 +1,6 @@
 import "./App.css";
-import { Sum } from "./services/Sum";
+import MyName from "./components/MyName/MyName";
+import Sum from "./services/Sum";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       >
         Suma de 3 y 5
       </button>
+      <MyName />
     </div>
   );
 }
