@@ -11,7 +11,8 @@ function App() {
         <div>
           <Switch>
             <Route exact path="/front-portfolio">
-              <MyName />
+              {/* <MyName /> */}
+              <h1>WIP</h1>
             </Route>
             <Route exact path="/front-portfolio/Test">
               <TestComponent />
