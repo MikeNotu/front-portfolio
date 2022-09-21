@@ -9,7 +9,7 @@ function App() {
         {/* <Navbar /> */}
         <div>
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/front-portfolio">
               <MyName />
             </Route>
             <Route path="/test">
