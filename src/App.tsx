@@ -1,19 +1,24 @@
-import "./App.css";
 import MyName from "./components/MyName/MyName";
-import Sum from "./services/Sum";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import TestComponent from "./components/TestComponent";
 
 function App() {
   return (
-    <div className="App">
-      <button
-        onClick={() => {
-          alert(Sum(3, 5));
-        }}
-      >
-        Suma de 3 y 5
-      </button>
-      <MyName />
-    </div>
+    <Router>
+      <div className="App">
+        {/* <Navbar /> */}
+        <div>
+          <Switch>
+            <Route exact path="/">
+              <MyName />
+            </Route>
+            <Route path="/test">
+              <TestComponent />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
