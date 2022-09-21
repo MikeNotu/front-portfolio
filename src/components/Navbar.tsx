@@ -13,7 +13,8 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import { Link } from "react-router-dom";
-import "../App.css";
+import "../App.scss";
+import { COLORS } from "../constants";
 
 const pages = ["Test", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -42,11 +43,15 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#f3f" }}>
+    <AppBar position="static" sx={{ backgroundColor: COLORS.customBlack }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LogoDevIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "#f3f" }}
+            sx={{
+              display: { xs: "none", md: "flex" },
+              mr: 1,
+              color: COLORS.customBlue,
+            }}
           />
           <Typography
             variant="h6"
@@ -59,7 +64,7 @@ const ResponsiveAppBar = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "#f3f",
+              color: COLORS.customBlue,
               textDecoration: "none",
             }}
           >
@@ -127,7 +132,7 @@ const ResponsiveAppBar = () => {
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, color: COLORS.customWhite, display: "block" }}
                 >
                   {page}
                 </Button>
