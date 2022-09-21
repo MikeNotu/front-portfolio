@@ -1,7 +1,7 @@
 import MyName from "./components/MyName/MyName";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TestComponent from "./components/TestComponent";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
