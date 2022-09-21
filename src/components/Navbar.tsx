@@ -11,11 +11,11 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import { Link } from "react-router-dom";
+import "../App.css";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Test", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
@@ -42,29 +42,29 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: "#f3f" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <LogoDevIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <LogoDevIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "#f3f" }}
+          />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="https://github.com/MikeNotu"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "#f3f",
               textDecoration: "none",
             }}
           >
             MIKE
           </Typography>
-          <Link to="/front-portfolio">Home</Link>
-          <Link to="/front-portfolio/test">Test</Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -123,7 +123,7 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link to="/front-portfolio/test">
+              <Link className="link" to={`/front-portfolio/${page}`}>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}

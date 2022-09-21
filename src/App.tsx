@@ -1,7 +1,7 @@
 import MyName from "./components/MyName/MyName";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TestComponent from "./components/TestComponent";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
             <Route exact path="/front-portfolio">
               <MyName />
             </Route>
-            <Route exact path="/front-portfolio/test">
+            <Route exact path="/front-portfolio/Test">
               <TestComponent />
             </Route>
           </Switch>
