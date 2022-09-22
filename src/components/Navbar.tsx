@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import "../App.scss";
 import { COLORS } from "../constants";
 
-const pages = ["Test", "Pricing", "Blog"];
+const pages = ["Test", "Cards", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
