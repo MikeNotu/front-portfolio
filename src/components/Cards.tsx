@@ -16,6 +16,8 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import Img_Chess from "../media/Chess.jpeg";
+import Img_OldWebsite from "../media/OldWebsite.jpg";
+import Img_AndroidApp from "../media/AndroidApp.jpg";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -56,8 +58,7 @@ const DATA: Data[] = [
     date: "September 14, 2012",
     description: "Loremloremlorem2",
     url: "https://mikenotu.github.io/Bateman/",
-    image:
-      "https://lh3.googleusercontent.com/drive-viewer/AJc5JmRx4c0XN3SMvKm-j92k2-MwuXV7Ux1JYUYzwxzHhgDOA_3pBNuZFZSRvruxpIs_-mGxSjuJ9oI=w2880-h1380",
+    image: Img_OldWebsite,
   },
   {
     title: "Titulo2",
@@ -65,6 +66,7 @@ const DATA: Data[] = [
     date: "September 14, 2012",
     description: "Loremloremlorem2",
     url: "https://www.youtube.com/watch?v=1U1sspCSeUo",
+    image: Img_AndroidApp,
   },
   {
     title: "Titulo2",
