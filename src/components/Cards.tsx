@@ -9,12 +9,13 @@ import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
+import Img_Chess from "../media/Chess.jpeg";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -31,34 +32,69 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-const DATA = [
+interface Data {
+  title: string;
+  text: string;
+  date: string;
+  description: string;
+  url: string | null;
+  image?: string;
+}
+
+const DATA: Data[] = [
   {
     title: "Titulo",
-    texto: "Lorem Ipsum",
+    text: "Lorem Ipsum",
     date: "September 14, 2016",
     description: "Loremloremlorem",
+    url: "https://mikenotu.github.io/chess-champions/",
+    image: Img_Chess,
   },
   {
     title: "Titulo2",
-    texto: "Lorem Ipsum2",
+    text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
     date: "September 14, 2012",
     description: "Loremloremlorem2",
+    url: "https://mikenotu.github.io/Bateman/",
+    image:
+      "https://lh3.googleusercontent.com/drive-viewer/AJc5JmRx4c0XN3SMvKm-j92k2-MwuXV7Ux1JYUYzwxzHhgDOA_3pBNuZFZSRvruxpIs_-mGxSjuJ9oI=w2880-h1380",
+  },
+  {
+    title: "Titulo2",
+    text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+    date: "September 14, 2012",
+    description: "Loremloremlorem2",
+    url: "https://www.youtube.com/watch?v=1U1sspCSeUo",
+  },
+  {
+    title: "Titulo2",
+    text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+    date: "September 14, 2012",
+    description: "Loremloremlorem2",
+    url: "https://www.youtube.com/watch?v=hTg2xmiK1qU",
+  },
+  {
+    title: "Titulo2",
+    text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+    date: "September 14, 2012",
+    description: "Loremloremlorem2",
+    url: null,
   },
 ];
 
 export default function RecipeReviewCard() {
   //   const [expanded, setExpanded] = React.useState(false);
-  const [upexpanded, setupExpanded] = React.useState([false, false]);
+  const [expanded, setExpanded] = React.useState([false, false]);
 
   const handleExpandClick = (index: number) => {
     // setExpanded(!expanded);
-    let finalValue: boolean[] = upexpanded;
+    let finalValue: boolean[] = expanded;
 
     finalValue[index] = !finalValue[index];
     // alert(
-    //   `index: ${index} upexpanded: ${upexpanded} finalValue: ${finalValue}`
+    //   `index: ${index} expanded: ${expanded} finalValue: ${finalValue}`
     // );
-    setupExpanded([...finalValue]);
+    setExpanded([...finalValue]);
   };
 
   return (
@@ -68,9 +104,10 @@ export default function RecipeReviewCard() {
           <Card key={index} sx={{ maxWidth: 345, margin: 3, mb: "auto" }}>
             <CardHeader
               avatar={
-                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                  M
-                </Avatar>
+                <Avatar
+                  alt="Mike Bateman"
+                  src="https://avatars.githubusercontent.com/u/43997532?v=4"
+                ></Avatar>
               }
               action={
                 <IconButton aria-label="settings">
@@ -80,15 +117,32 @@ export default function RecipeReviewCard() {
               title={data.title}
               subheader={data.date}
             />
-            <CardMedia
-              component="img"
-              height="194"
-              image="https://i.ytimg.com/vi/XY7TDNVvHqs/maxresdefault.jpg"
-              alt="Paella dish"
-            />
+            {data.url !== null ? (
+              <Link
+                to={{
+                  pathname: data.url,
+                }}
+                target="_blank"
+              >
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image={data.image}
+                  alt={data.title}
+                />
+              </Link>
+            ) : (
+              <CardMedia
+                component="img"
+                height="194"
+                image={data.image}
+                alt={data.title}
+              />
+            )}
+
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                {data.texto}
+                {data.text}
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
@@ -99,17 +153,17 @@ export default function RecipeReviewCard() {
                 <ShareIcon />
               </IconButton>
               <ExpandMore
-                expand={upexpanded[index]}
+                expand={expanded[index]}
                 onClick={() => {
                   handleExpandClick(index);
                 }}
-                aria-expanded={upexpanded[index]}
+                aria-expanded={expanded[index]}
                 aria-label="show more"
               >
                 <ExpandMoreIcon />
               </ExpandMore>
             </CardActions>
-            <Collapse in={upexpanded[index]} timeout="auto" unmountOnExit>
+            <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
               <CardContent>
                 <Typography paragraph>Method:</Typography>
                 <Typography paragraph>
