@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <div>
           <Switch>
-            <Route exact path="/front-portfolio">
+            <Route exact path={["/front-portfolio", "/front-portfolio/Index"]}>
               {/* <MyName /> */}
               <h1>WIP</h1>
             </Route>
