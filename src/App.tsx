@@ -13,7 +13,8 @@ function App() {
           <Switch>
             <Route exact path={["/front-portfolio", "/front-portfolio/Index"]}>
               {/* <MyName /> */}
-              <h1>WIP</h1>
+              {/* <h1>WIP</h1> */}
+              <Cards />
             </Route>
             <Route exact path="/front-portfolio/Test">
               <TestComponent />
