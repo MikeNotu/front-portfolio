@@ -18,6 +18,8 @@ import { Link } from "react-router-dom";
 import Img_Chess from "../media/Chess.jpeg";
 import Img_OldWebsite from "../media/OldWebsite.jpg";
 import Img_AndroidApp from "../media/AndroidApp.jpg";
+import Img_NeuralNetwork from "../media/NeuralNetwork.jpg";
+import Img_GitHub from "../media/GitHub.jpg";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -37,17 +39,17 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 interface Data {
   title: string;
   text: string;
-  date: string;
+  date: string | null;
   description: string;
   url: string | null;
-  image?: string;
+  image: string;
 }
 
 const DATA: Data[] = [
   {
     title: "Titulo",
     text: "Lorem Ipsum",
-    date: "September 14, 2016",
+    date: "Jul 11, 2021",
     description: "Loremloremlorem",
     url: "https://mikenotu.github.io/chess-champions/",
     image: Img_Chess,
@@ -55,15 +57,15 @@ const DATA: Data[] = [
   {
     title: "Titulo2",
     text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-    date: "September 14, 2012",
+    date: "Mar 30, 2021",
     description: "Loremloremlorem2",
     url: "https://mikenotu.github.io/Bateman/",
     image: Img_OldWebsite,
   },
   {
-    title: "Titulo2",
+    title: "Talk & Play",
     text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-    date: "September 14, 2012",
+    date: "Jun 8, 2020",
     description: "Loremloremlorem2",
     url: "https://www.youtube.com/watch?v=1U1sspCSeUo",
     image: Img_AndroidApp,
@@ -71,16 +73,18 @@ const DATA: Data[] = [
   {
     title: "Titulo2",
     text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-    date: "September 14, 2012",
+    date: "Nov 22, 2019",
     description: "Loremloremlorem2",
     url: "https://www.youtube.com/watch?v=hTg2xmiK1qU",
+    image: Img_NeuralNetwork,
   },
   {
-    title: "Titulo2",
+    title: "My GitHub",
     text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-    date: "September 14, 2012",
+    date: null,
     description: "Loremloremlorem2",
-    url: null,
+    url: "https://github.com/MikeNotu",
+    image: Img_GitHub,
   },
 ];
 
