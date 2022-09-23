@@ -15,11 +15,12 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
-import Img_Chess from "../media/Chess.jpeg";
+import Img_Chess from "../media/Chess.jpg";
 import Img_OldWebsite from "../media/OldWebsite.jpg";
 import Img_AndroidApp from "../media/AndroidApp.jpg";
 import Img_NeuralNetwork from "../media/NeuralNetwork.jpg";
 import Img_GitHub from "../media/GitHub.jpg";
+import Img_ReduxTestingHocs from "../media/ReduxTestingHocs.jpg";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -47,8 +48,16 @@ interface Data {
 
 const DATA: Data[] = [
   {
+    title: "Internal Project",
+    text: "React, Redux, Typescript, React Testing Library + Jest, React Router, HOCs & SCSS",
+    date: "Dec 30, 2021",
+    description: "Loremloremlorem",
+    url: "  https://codesandbox.io/s/bateman-redux-typescript-t3w0i",
+    image: Img_ReduxTestingHocs,
+  },
+  {
     title: "Titulo",
-    text: "Lorem Ipsum",
+    text: "React, Javascript, Fetch, Material UI(MUI), React Router & SCSS",
     date: "Jul 11, 2021",
     description: "Loremloremlorem",
     url: "https://mikenotu.github.io/chess-champions/",
@@ -88,7 +97,7 @@ const DATA: Data[] = [
   },
 ];
 
-export default function RecipeReviewCard() {
+const Cards: React.FC = () => {
   //   const [expanded, setExpanded] = React.useState(false);
   const [expanded, setExpanded] = React.useState([false, false]);
 
@@ -207,4 +216,6 @@ export default function RecipeReviewCard() {
       })}
     </Grid>
   );
-}
+};
+
+export default Cards;
