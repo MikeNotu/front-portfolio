@@ -19,7 +19,7 @@ import Img_AndroidApp from "../media/AndroidApp.jpg";
 import Img_NeuralNetwork from "../media/NeuralNetwork.jpg";
 import Img_GitHub from "../media/GitHub.jpg";
 import Img_ReduxTestingHocs from "../media/ReduxTestingHocs.jpg";
-import "../App.scss";
+import { COLORS } from "../constants";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -172,7 +172,7 @@ const Cards: React.FC = () => {
                     }}
                     target="_blank"
                   >
-                    <CodeIcon className="repo-link" />
+                    <CodeIcon sx={{ color: COLORS.customGray }} />
                   </Link>
                 ) : null}
               </IconButton>

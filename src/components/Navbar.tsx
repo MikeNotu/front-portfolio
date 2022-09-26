@@ -13,11 +13,10 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import { Link } from "react-router-dom";
-import "../App.scss";
 import { COLORS } from "../constants";
 
 const pages = ["Index", "Test", "Cards", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["GitHub"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -128,7 +127,13 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link key={page} className="link" to={`/front-portfolio/${page}`}>
+              <Link
+                key={page}
+                style={{
+                  textDecoration: "none",
+                }}
+                to={`/front-portfolio/${page}`}
+              >
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -166,9 +171,17 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
+                <Link
+                  style={{ color: COLORS.customBlue, textDecoration: "none" }}
+                  to={{
+                    pathname: "https://github.com/MikeNotu",
+                  }}
+                  target="_blank"
+                >
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>

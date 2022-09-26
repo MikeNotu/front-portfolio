@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "../App.scss";
 const TestComponent = () => {
   const [counter, setCounter] = useState(0);
   const [counter2, setCounter2] = useState(0);
@@ -54,7 +53,7 @@ const TestComponent = () => {
       {data.hasOwnProperty(100000) ? (
         JSON.stringify(data[0])
       ) : (
-        <h1 className="">No existe eso amigo</h1>
+        <h1>No existe eso amigo</h1>
       )}
     </div>
   );
