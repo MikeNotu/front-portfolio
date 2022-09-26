@@ -64,7 +64,7 @@ const DATA: Data[] = [
     technologies:
       "React, Javascript, REST API, Fetch, Material UI(MUI), Material Table, React Router, HTML, Git, GitHub & SCSS",
     long_description:
-      "Chess Website that displays the top Blitz players from wwww.chess.com using a Get Request(REST) in a table that allows filtering of any of the properties and exporting the table as a PDF file or an Excel file.",
+      "Chess Website that displays the top Blitz players from wwww.chess.com using a Get Request(REST) in a table that allows filtering of any of the properties and exporting the table as a PDF file or an Excel file. It also loads a different chess puzzle each day.",
     url: "https://mikenotu.github.io/chess-champions/",
     image: Img_Chess,
     repository: "https://github.com/MikeNotu/chess-champions",
@@ -74,7 +74,7 @@ const DATA: Data[] = [
     date: "Mar 30, 2021",
     technologies: "HTML, CSS, Bootstrap, Font Awesome, Git & GitHub",
     long_description:
-      "Old portfolio used to demostrate knowledge in Frontend Development, Android Development, Python, ASP.NET Core, C#, Git & GitHub",
+      "Old portfolio used to demostrate knowledge in Frontend Development, Android Development, Python, ASP.NET Core, C#, Git & GitHub.",
     url: "https://mikenotu.github.io/Bateman/",
     image: Img_OldWebsite,
     repository: "https://github.com/MikeNotu/Bateman",
@@ -92,9 +92,9 @@ const DATA: Data[] = [
   {
     title: "Titulo2",
     date: "Nov 22, 2019",
-    technologies:
-      "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-    long_description: "Loremloremlorem2",
+    technologies: "Python & OpenCV",
+    long_description:
+      "Convolutional Neural Network that can differentiate between a Kimono and a Mexican Dress.",
     url: "https://www.youtube.com/watch?v=hTg2xmiK1qU",
     image: Img_NeuralNetwork,
     repository: null,
@@ -102,27 +102,21 @@ const DATA: Data[] = [
   {
     title: "My GitHub",
     date: null,
-    technologies:
-      "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
-    long_description: "Loremloremlorem2",
+    technologies: "Git & GitHub",
+    long_description: "GitHub with personal Projects.",
     url: "https://github.com/MikeNotu",
     image: Img_GitHub,
-    repository: null,
+    repository: "https://github.com/MikeNotu?tab=repositories",
   },
 ];
 
 const Cards: React.FC = () => {
-  //   const [expanded, setExpanded] = React.useState(false);
   const [expanded, setExpanded] = React.useState([false, false]);
 
   const handleExpandClick = (index: number) => {
-    // setExpanded(!expanded);
     let finalValue: boolean[] = expanded;
 
     finalValue[index] = !finalValue[index];
-    // alert(
-    //   `index: ${index} expanded: ${expanded} finalValue: ${finalValue}`
-    // );
     setExpanded([...finalValue]);
   };
 
