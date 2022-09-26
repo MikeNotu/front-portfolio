@@ -2,7 +2,7 @@ import "../MyName/MyName.scss";
 import Avatar from "@mui/material/Avatar";
 import { deepPurple } from "@mui/material/colors";
 
-function MyName() {
+const MyName = () => {
   return (
     <div>
       <Avatar
@@ -13,6 +13,6 @@ function MyName() {
       <h1 className="blue">Test</h1>
     </div>
   );
-}
+};
 
 export default MyName;

@@ -2,9 +2,10 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TestComponent from "./components/TestComponent";
 import Navbar from "./components/Navbar";
-import Cards from "./components/Cards";
+import LandingPage from "./views/LandingPage";
+import CardsPage from "./views/CardsPage";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div>
@@ -15,22 +16,19 @@ function App() {
               exact
               path={["/", "/front-portfolio", "/front-portfolio/Index"]}
             >
-              {/* <MyName /> */}
-              {/* <h1>WIP</h1> */}
-              <Cards />
+              <LandingPage />
             </Route>
             <Route exact path="/front-portfolio/Test">
               <TestComponent />
-              {/* <Cards /> */}
             </Route>
             <Route exact path="/front-portfolio/Cards">
-              <Cards />
+              <CardsPage />
             </Route>
           </Switch>
         </div>
       </div>
     </Router>
   );
-}
+};
 
 export default App;
