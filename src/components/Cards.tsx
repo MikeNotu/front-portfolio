@@ -9,10 +9,8 @@ import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
+import CodeIcon from "@mui/icons-material/Code";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import Img_Chess from "../media/Chess.jpg";
@@ -21,6 +19,7 @@ import Img_AndroidApp from "../media/AndroidApp.jpg";
 import Img_NeuralNetwork from "../media/NeuralNetwork.jpg";
 import Img_GitHub from "../media/GitHub.jpg";
 import Img_ReduxTestingHocs from "../media/ReduxTestingHocs.jpg";
+import "../App.scss";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -39,62 +38,76 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 interface Data {
   title: string;
-  text: string;
   date: string | null;
-  description: string;
+  technologies: string;
+  long_description: string;
   url: string | null;
   image: string;
+  repository: string | null;
 }
 
 const DATA: Data[] = [
   {
     title: "Technologies Project",
-    text: "React, Redux, Typescript, React Testing Library + Jest, React Router, HOCs & SCSS",
     date: "Dec 30, 2021",
-    description:
-      "Project created to demonstrate implementation of multiple technologies working together.",
-    url: "  https://codesandbox.io/s/bateman-redux-typescript-t3w0i",
+    technologies:
+      "React, Redux, Typescript, React Testing Library + Jest, React Router, HOCs, HTML, Git, GitHub & SCSS",
+    long_description:
+      "Project to demonstrate the implementation of multiple technologies working together.",
+    url: "https://t3w0i.csb.app/",
     image: Img_ReduxTestingHocs,
+    repository: "https://codesandbox.io/s/bateman-redux-typescript-t3w0i",
   },
   {
     title: "Chess Champions",
-    text: "React, Javascript, Fetch, Material UI(MUI), React Router & SCSS",
     date: "Jul 11, 2021",
-    description: "Loremloremlorem",
+    technologies:
+      "React, Javascript, REST API, Fetch, Material UI(MUI), Material Table, React Router, HTML, Git, GitHub & SCSS",
+    long_description:
+      "Chess Website that displays the top Blitz players from wwww.chess.com using a Get Request(REST) in a table that allows filtering of any of the properties and exporting the table as a PDF file or an Excel file.",
     url: "https://mikenotu.github.io/chess-champions/",
     image: Img_Chess,
+    repository: "https://github.com/MikeNotu/chess-champions",
   },
   {
-    title: "Titulo2",
-    text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+    title: "Old Portfolio",
     date: "Mar 30, 2021",
-    description: "Loremloremlorem2",
+    technologies: "HTML, CSS, Bootstrap, Font Awesome, Git & GitHub",
+    long_description:
+      "Old portfolio used to demostrate knowledge in Frontend Development, Android Development, Python, ASP.NET Core, C#, Git & GitHub",
     url: "https://mikenotu.github.io/Bateman/",
     image: Img_OldWebsite,
+    repository: "https://github.com/MikeNotu/Bateman",
   },
   {
     title: "Talk & Play",
-    text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
     date: "Jun 8, 2020",
-    description: "Loremloremlorem2",
+    technologies: "Android & Java",
+    long_description:
+      "Android app that helps kids learn basic vocabulary by using voice recognition. The app works in both English and Spanish.",
     url: "https://www.youtube.com/watch?v=1U1sspCSeUo",
     image: Img_AndroidApp,
+    repository: null,
   },
   {
     title: "Titulo2",
-    text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
     date: "Nov 22, 2019",
-    description: "Loremloremlorem2",
+    technologies:
+      "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+    long_description: "Loremloremlorem2",
     url: "https://www.youtube.com/watch?v=hTg2xmiK1qU",
     image: Img_NeuralNetwork,
+    repository: null,
   },
   {
     title: "My GitHub",
-    text: "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
     date: null,
-    description: "Loremloremlorem2",
+    technologies:
+      "Loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem",
+    long_description: "Loremloremlorem2",
     url: "https://github.com/MikeNotu",
     image: Img_GitHub,
+    repository: null,
   },
 ];
 
@@ -125,11 +138,6 @@ const Cards: React.FC = () => {
                   src="https://avatars.githubusercontent.com/u/43997532?v=4"
                 ></Avatar>
               }
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon />
-                </IconButton>
-              }
               title={data.title}
               subheader={data.date}
             />
@@ -158,15 +166,21 @@ const Cards: React.FC = () => {
 
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                {data.text}
+                {data.technologies}
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
+              <IconButton aria-label="repository">
+                {data.repository !== null ? (
+                  <Link
+                    to={{
+                      pathname: data.repository,
+                    }}
+                    target="_blank"
+                  >
+                    <CodeIcon className="repo-link" />
+                  </Link>
+                ) : null}
               </IconButton>
               <ExpandMore
                 expand={expanded[index]}
@@ -181,7 +195,7 @@ const Cards: React.FC = () => {
             </CardActions>
             <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
               <CardContent>
-                <Typography>{data.description}</Typography>
+                <Typography>{data.long_description}</Typography>
               </CardContent>
             </Collapse>
           </Card>

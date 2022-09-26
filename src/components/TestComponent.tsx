@@ -54,7 +54,7 @@ const TestComponent = () => {
       {data.hasOwnProperty(100000) ? (
         JSON.stringify(data[0])
       ) : (
-        <h1 className="estiloCool">No existe eso amigo</h1>
+        <h1 className="">No existe eso amigo</h1>
       )}
     </div>
   );
