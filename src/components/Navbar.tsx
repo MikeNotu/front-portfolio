@@ -16,7 +16,6 @@ import { Link } from "react-router-dom";
 import { COLORS } from "../constants";
 
 const pages = ["Index", "Test", "Cards", "Blog"];
-const settings = ["GitHub"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -42,35 +41,58 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: COLORS.customBlack }}>
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: COLORS.customBlack,
+        display: "flex",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <LogoDevIcon
-            sx={{
-              display: { xs: "none", md: "flex" },
-              mr: 1,
-              color: COLORS.customBlue,
-            }}
-          />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="https://github.com/MikeNotu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: COLORS.customBlue,
+          <Link
+            style={{
               textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+            }}
+            to={{
+              pathname: "https://github.com/MikeNotu",
+            }}
+            target="_blank"
+          >
+            <LogoDevIcon
+              sx={{
+                display: { xs: "none", md: "flex" },
+                mr: 1,
+                color: COLORS.customBlue,
+              }}
+            />
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: COLORS.customBlue,
+                textDecoration: "none",
+              }}
+            >
+              MIKE
+            </Typography>
+          </Link>
+
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "space-between",
             }}
           >
-            MIKE
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -81,6 +103,46 @@ const ResponsiveAppBar = () => {
             >
               <MenuIcon />
             </IconButton>
+            <Link
+              style={{
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "row",
+                // width: "50%",
+                // justifyContent: "center",
+              }}
+              to={{
+                pathname: "https://github.com/MikeNotu",
+              }}
+              target="_blank"
+            >
+              <LogoDevIcon
+                sx={{
+                  display: { xs: "flex", md: "none", color: COLORS.customBlue },
+                  mr: 1,
+                }}
+              />
+              <Typography
+                variant="h5"
+                noWrap
+                component="a"
+                href=""
+                sx={{
+                  mr: 2,
+                  display: { xs: "flex", md: "none" },
+                  flexGrow: 1,
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: COLORS.customBlue,
+                  textDecoration: "none",
+                }}
+              >
+                MIKE
+              </Typography>
+            </Link>
+            <div></div>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -106,26 +168,14 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <LogoDevIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
+
+          <Box
             sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
+              display: { xs: "none", md: "flex" },
+              justifyContent: "flex-end",
             }}
           >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Link
                 key={page}
@@ -170,19 +220,17 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <Link
-                  style={{ color: COLORS.customBlue, textDecoration: "none" }}
-                  to={{
-                    pathname: "https://github.com/MikeNotu",
-                  }}
-                  target="_blank"
-                >
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                </Link>
-              ))}
+              <Link
+                style={{ color: COLORS.customGray, textDecoration: "none" }}
+                to={{
+                  pathname: "https://github.com/MikeNotu",
+                }}
+                target="_blank"
+              >
+                <MenuItem key="GitHub" onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">GitHub</Typography>
+                </MenuItem>
+              </Link>
             </Menu>
           </Box>
         </Toolbar>
