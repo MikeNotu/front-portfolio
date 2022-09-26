@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/front-portfolio/static/css/main.d88e22a3.css",
-    "main.js": "/front-portfolio/static/js/main.26207771.js",
+    "main.css": "/front-portfolio/static/css/main.e6c13ad2.css",
+    "main.js": "/front-portfolio/static/js/main.5286997b.js",
     "static/js/787.ef3a7dc4.chunk.js": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js",
     "static/media/ReduxTestingHocs.jpg": "/front-portfolio/static/media/ReduxTestingHocs.1a01134ac1f0d192e1ac.jpg",
     "static/media/OldWebsite.jpg": "/front-portfolio/static/media/OldWebsite.8f5326aae24048e649ab.jpg",
@@ -10,12 +10,12 @@
     "static/media/GitHub.jpg": "/front-portfolio/static/media/GitHub.e4bf312203a0f6f2f5eb.jpg",
     "static/media/AndroidApp.jpg": "/front-portfolio/static/media/AndroidApp.ba949d2154144bdc56f2.jpg",
     "index.html": "/front-portfolio/index.html",
-    "main.d88e22a3.css.map": "/front-portfolio/static/css/main.d88e22a3.css.map",
-    "main.26207771.js.map": "/front-portfolio/static/js/main.26207771.js.map",
+    "main.e6c13ad2.css.map": "/front-portfolio/static/css/main.e6c13ad2.css.map",
+    "main.5286997b.js.map": "/front-portfolio/static/js/main.5286997b.js.map",
     "787.ef3a7dc4.chunk.js.map": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d88e22a3.css",
-    "static/js/main.26207771.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.5286997b.js"
   ]
 }
