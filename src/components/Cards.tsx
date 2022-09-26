@@ -90,7 +90,7 @@ const DATA: Data[] = [
     repository: null,
   },
   {
-    title: "Titulo2",
+    title: "Convolutional Neural Network",
     date: "Nov 22, 2019",
     technologies: "Python & OpenCV",
     long_description:
