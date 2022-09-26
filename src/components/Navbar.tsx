@@ -162,9 +162,18 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Link
+                  key={page}
+                  style={{
+                    textDecoration: "none",
+                    color: COLORS.customBlack,
+                  }}
+                  to={`/front-portfolio/${page}`}
+                >
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -221,7 +230,7 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseUserMenu}
             >
               <Link
-                style={{ color: COLORS.customGray, textDecoration: "none" }}
+                style={{ color: COLORS.customBlack, textDecoration: "none" }}
                 to={{
                   pathname: "https://github.com/MikeNotu",
                 }}
