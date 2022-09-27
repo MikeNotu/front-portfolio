@@ -16,7 +16,8 @@ const App = () => {
               exact
               path={["/", "/front-portfolio", "/front-portfolio/Index"]}
             >
-              <LandingPage />
+              <CardsPage />
+              {/* <LandingPage /> */}
             </Route>
             <Route exact path="/front-portfolio/Test">
               <TestComponent />
