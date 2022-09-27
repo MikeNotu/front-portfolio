@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/front-portfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/front-portfolio/static/js/main.912870bc.js",
+    "main.js": "/front-portfolio/static/js/main.cecdd748.js",
     "static/js/787.ef3a7dc4.chunk.js": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js",
     "static/media/ReduxTestingHocs.jpg": "/front-portfolio/static/media/ReduxTestingHocs.1a01134ac1f0d192e1ac.jpg",
     "static/media/OldWebsite.jpg": "/front-portfolio/static/media/OldWebsite.8f5326aae24048e649ab.jpg",
@@ -11,11 +11,11 @@
     "static/media/AndroidApp.jpg": "/front-portfolio/static/media/AndroidApp.ba949d2154144bdc56f2.jpg",
     "index.html": "/front-portfolio/index.html",
     "main.e6c13ad2.css.map": "/front-portfolio/static/css/main.e6c13ad2.css.map",
-    "main.912870bc.js.map": "/front-portfolio/static/js/main.912870bc.js.map",
+    "main.cecdd748.js.map": "/front-portfolio/static/js/main.cecdd748.js.map",
     "787.ef3a7dc4.chunk.js.map": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.912870bc.js"
+    "static/js/main.cecdd748.js"
   ]
 }
