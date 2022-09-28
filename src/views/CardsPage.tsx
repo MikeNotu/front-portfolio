@@ -5,6 +5,7 @@ import Img_AndroidApp from "../media/AndroidApp.jpg";
 import Img_NeuralNetwork from "../media/NeuralNetwork.jpg";
 import Img_GitHub from "../media/GitHub.jpg";
 import Img_ReduxTestingHocs from "../media/ReduxTestingHocs.jpg";
+import Img_TypescriptWebsite from "../media/TypescriptWebsite.jpg";
 
 export interface Data {
   title: string;
@@ -17,6 +18,15 @@ export interface Data {
 }
 
 const DATA: Data[] = [
+  {
+    title: "In Depth Typescript",
+    date: "Sep 27, 2022",
+    technologies: "React, Typescript, HTML, Git & GitHub ",
+    long_description: "Project to practice Typescript Features.",
+    url: "https://mikenotu.github.io/in-depth-typescript/",
+    image: Img_TypescriptWebsite,
+    repository: "https://github.com/MikeNotu/in-depth-typescript",
+  },
   {
     title: "Technologies Project",
     date: "Dec 30, 2021",
