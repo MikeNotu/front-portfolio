@@ -90,8 +90,7 @@ const DATA: Data[] = [
   },
 ];
 
-const CardsPage = () => {
-  const textp: string = "Hellowxd";
+const CardsPage: React.FC = () => {
   return (
     <div>
       <Cards DATA={DATA} />

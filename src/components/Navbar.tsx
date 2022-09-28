@@ -15,7 +15,8 @@ import LogoDevIcon from "@mui/icons-material/LogoDev";
 import { Link } from "react-router-dom";
 import { COLORS } from "../constants";
 
-const pages = ["Index", "Test", "Cards", "Blog"];
+const pages = ["Index"];
+// const pages = ["Index", "Test", "Cards", "Blog"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -109,8 +110,6 @@ const ResponsiveAppBar = () => {
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "row",
-                // width: "50%",
-                // justifyContent: "center",
               }}
               to={{
                 pathname: "https://github.com/MikeNotu",
