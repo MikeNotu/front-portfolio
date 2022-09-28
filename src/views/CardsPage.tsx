@@ -19,10 +19,10 @@ export interface Data {
 
 const DATA: Data[] = [
   {
-    title: "In Depth Typescript",
+    title: "In Depth TypeScript",
     date: "Sep 27, 2022",
-    technologies: "React, Typescript, HTML, Git & GitHub ",
-    long_description: "Project to practice Typescript Features.",
+    technologies: "React, TypeScript, HTML, Git, CSS & GitHub ",
+    long_description: "Project to practice TypeScript Features.",
     url: "https://mikenotu.github.io/in-depth-typescript/",
     image: Img_TypescriptWebsite,
     repository: "https://github.com/MikeNotu/in-depth-typescript",
