@@ -12,10 +12,23 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
+import HomeIcon from "@mui/icons-material/Home";
 import { Link } from "react-router-dom";
 import { COLORS } from "../constants";
 
-const pages = ["Index"];
+// const pages = ["Index"];
+
+interface Ipages {
+  name: string;
+  icon: JSX.Element;
+}
+
+const pages: Ipages[] = [
+  {
+    name: "Index",
+    icon: <HomeIcon sx={{ marginBottom: "-0.25em" }} />,
+  },
+];
 // const pages = ["Index", "Test", "Cards", "Blog"];
 
 const ResponsiveAppBar = () => {
@@ -162,15 +175,15 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <Link
-                  key={page}
+                  key={page.name}
                   style={{
                     textDecoration: "none",
                     color: COLORS.customBlack,
                   }}
-                  to={`/front-portfolio/${page}`}
+                  to={`/front-portfolio/${page.name}`}
                 >
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 </Link>
               ))}
@@ -186,18 +199,24 @@ const ResponsiveAppBar = () => {
           >
             {pages.map((page) => (
               <Link
-                key={page}
+                key={page.name}
                 style={{
                   textDecoration: "none",
                 }}
-                to={`/front-portfolio/${page}`}
+                to={`/front-portfolio/${page.name}`}
               >
                 <Button
-                  key={page}
+                  key={page.name}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: COLORS.customWhite, display: "block" }}
+                  sx={{
+                    my: 2,
+                    mr: 2,
+                    color: COLORS.customWhite,
+                    display: "block",
+                  }}
                 >
-                  {page}
+                  {page.name}
+                  {page.icon}
                 </Button>
               </Link>
             ))}
