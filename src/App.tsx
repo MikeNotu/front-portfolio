@@ -12,7 +12,7 @@ const App = () => {
         <Navbar />
         <div>
           <h1 style={{ display: "flex", justifyContent: "center" }}>
-            This website is a Porfolio of some of my Personal Projects
+            This website is a Porfolio of some of my Personal Projects.
           </h1>
         </div>
         <div>
