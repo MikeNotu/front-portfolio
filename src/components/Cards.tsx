@@ -45,7 +45,10 @@ const Cards = ({ DATA: DATA }: { DATA: Data[] }) => {
     <Grid alignItems="center" justifyContent="center" container margin={1}>
       {DATA.map((data, index) => {
         return (
-          <Card key={index} sx={{ width: 345, margin: 3, mb: "auto" }}>
+          <Card
+            key={index}
+            sx={{ width: 345, margin: 3, mb: "auto", fontFamily: "sans-serif" }}
+          >
             <CardHeader
               avatar={
                 <Avatar
