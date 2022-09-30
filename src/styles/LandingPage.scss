@@ -1,5 +1,6 @@
 .landing-page {
-  background: #1a1e23;
+  display: absolute;
+  // background: #1a1e23;
   margin: 0;
 }
 
@@ -27,7 +28,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
   position: absolute;
   left: var(--bubble-left-offset);
   bottom: -75%;
-  display: block;
+  display: absolute;
   width: var(--bubble-radius);
   height: var(--bubble-radius);
   border-radius: 50%;
@@ -84,4 +85,48 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
   to {
     transform: translateX(-100%);
   }
+}
+
+.sec-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5em;
+  background: none;
+}
+
+.jumbotron {
+  display: flex;
+  margin-left: 30em;
+  // background-color: rgba(182, 232, 228, 0.8);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(9, 9, 121, 0.186734068627451) 17%,
+    rgba(0, 212, 255, 0.3604035364145658) 100%
+  );
+  width: 45em;
+  height: 25em;
+  border-radius: 15em 15em 15em 15em;
+  // border-style: solid;
+  // border-width: 0.5em;
+  box-shadow: 2em 2em 2em 2em;
+  z-index: 1;
+  box-shadow: 0.3em 0.3em 1em rgb(140, 140, 140);
+}
+
+.man {
+  opacity: 60%;
+  border-radius: 0em 0em 22.5em 35em;
+}
+
+.jumbotron__description {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotron__description--sec3 {
+  margin-left: 0.5em;
 }
