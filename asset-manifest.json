@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/front-portfolio/static/css/main.0222f48a.css",
-    "main.js": "/front-portfolio/static/js/main.56df910a.js",
+    "main.js": "/front-portfolio/static/js/main.65cdeced.js",
     "static/js/787.ef3a7dc4.chunk.js": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js",
     "static/media/ReduxTestingHocs.jpg": "/front-portfolio/static/media/ReduxTestingHocs.1a01134ac1f0d192e1ac.jpg",
     "static/media/OldWebsite.jpg": "/front-portfolio/static/media/OldWebsite.8f5326aae24048e649ab.jpg",
@@ -12,11 +12,11 @@
     "static/media/AndroidApp.jpg": "/front-portfolio/static/media/AndroidApp.ba949d2154144bdc56f2.jpg",
     "index.html": "/front-portfolio/index.html",
     "main.0222f48a.css.map": "/front-portfolio/static/css/main.0222f48a.css.map",
-    "main.56df910a.js.map": "/front-portfolio/static/js/main.56df910a.js.map",
+    "main.65cdeced.js.map": "/front-portfolio/static/js/main.65cdeced.js.map",
     "787.ef3a7dc4.chunk.js.map": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0222f48a.css",
-    "static/js/main.56df910a.js"
+    "static/js/main.65cdeced.js"
   ]
 }
