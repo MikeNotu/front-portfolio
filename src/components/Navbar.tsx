@@ -26,10 +26,6 @@ interface Ipages {
 
 const pages: Ipages[] = [
   {
-    name: "Index",
-    icon: <HomeIcon sx={{ marginBottom: "-0.25em" }} />,
-  },
-  {
     name: "Projects",
     icon: <EngineeringIcon sx={{ marginBottom: "-0.25em" }} />,
   },
