@@ -11,23 +11,18 @@ const App = () => {
       <div>
         <Navbar />
         <div>
-          <h1 style={{ display: "flex", justifyContent: "center" }}>
-            This website is a Porfolio of some of my Personal Projects.
-          </h1>
-        </div>
-        <div>
           <Switch>
             <Route
               exact
               path={["/", "/front-portfolio", "/front-portfolio/Index"]}
             >
-              <CardsPage />
-              {/* <LandingPage /> */}
+              {/* <CardsPage /> */}
+              <LandingPage />
             </Route>
             <Route exact path="/front-portfolio/Test">
               <TestComponent />
             </Route>
-            <Route exact path="/front-portfolio/Cards">
+            <Route exact path="/front-portfolio/Projects">
               <CardsPage />
             </Route>
           </Switch>

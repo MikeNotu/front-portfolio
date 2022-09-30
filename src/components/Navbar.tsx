@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import HomeIcon from "@mui/icons-material/Home";
+import EngineeringIcon from "@mui/icons-material/Engineering";
 import { Link } from "react-router-dom";
 import { COLORS } from "../constants";
 
@@ -27,6 +28,10 @@ const pages: Ipages[] = [
   {
     name: "Index",
     icon: <HomeIcon sx={{ marginBottom: "-0.25em" }} />,
+  },
+  {
+    name: "Projects",
+    icon: <EngineeringIcon sx={{ marginBottom: "-0.25em" }} />,
   },
 ];
 // const pages = ["Index", "Test", "Cards", "Blog"];

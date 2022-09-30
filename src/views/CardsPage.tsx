@@ -93,6 +93,11 @@ const DATA: Data[] = [
 const CardsPage: React.FC = () => {
   return (
     <div>
+      <div>
+        <h1 style={{ display: "flex", justifyContent: "center" }}>
+          This website is a Porfolio of some of my Personal Projects.
+        </h1>
+      </div>
       <Cards DATA={DATA} />
     </div>
   );
