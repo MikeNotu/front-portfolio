@@ -185,7 +185,14 @@ const ResponsiveAppBar = () => {
                   to={`/front-portfolio/${page.name}`}
                 >
                   <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page.name}</Typography>
+                    <Typography
+                      style={{
+                        fontFamily: "Segoe UI, Arial, sansSerif",
+                      }}
+                      textAlign="center"
+                    >
+                      {page.name}
+                    </Typography>
                   </MenuItem>
                 </Link>
               ))}
@@ -215,6 +222,7 @@ const ResponsiveAppBar = () => {
                     mr: 2,
                     color: COLORS.customWhite,
                     display: "block",
+                    fontFamily: "Segoe UI, Arial, sansSerif",
                   }}
                 >
                   {page.name}
@@ -257,7 +265,14 @@ const ResponsiveAppBar = () => {
                 target="_blank"
               >
                 <MenuItem key="GitHub" onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">GitHub</Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: "Segoe UI, Arial, sansSerif",
+                    }}
+                    textAlign="center"
+                  >
+                    GitHub
+                  </Typography>
                 </MenuItem>
               </Link>
             </Menu>
