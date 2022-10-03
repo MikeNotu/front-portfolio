@@ -1,3 +1,11 @@
+body {
+  background-attachment: fixed;
+}
+
+html {
+  margin-bottom: 100px;
+  overflow: auto;
+}
 .landing-page {
   display: absolute;
   // background: #1a1e23;
@@ -19,9 +27,8 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 
 .bubbles {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 .bubble {
@@ -96,8 +103,11 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 }
 
 .jumbotron {
+  margin-left: 2em;
+  margin-right: 2em;
   align-self: flex-start;
   display: flex;
+  text-align: center;
   // margin-left: 35em;
   // background-color: rgba(182, 232, 228, 0.8);
   background: rgb(255, 255, 255);
@@ -107,42 +117,14 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
     rgba(9, 9, 121, 0.186734068627451) 17%,
     rgba(0, 212, 255, 0.3604035364145658) 100%
   );
-  width: 60vw;
-  height: 45vh;
+  // width: 60vw;
+  // height: 45vh;
   border-radius: 15em 15em 15em 15em;
   // border-style: solid;
   // border-width: 0.5em;
   box-shadow: 2em 2em 2em 2em;
   z-index: 1;
   box-shadow: 0.3em 0.3em 1em rgb(140, 140, 140);
-}
-@media only screen and (max-width: 768px) {
-  .sec-1 {
-    flex-direction: column;
-  }
-  // .jumbotron {
-  //   width: 22.5em;
-  //   height: 12.5em;
-  // }
-
-  .jumbotron {
-    flex-direction: column;
-    align-self: center;
-
-    // width: 50%;
-    // height: 50%;
-  }
-
-  .jumbotron__description {
-    margin-top: 10em;
-  }
-
-  .man {
-    margin-top: 2em;
-    align-self: center;
-    width: 35vw;
-    height: fit-content;
-  }
 }
 
 .technologies {
@@ -169,8 +151,14 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
   // height: auto;
 
   // height: auto;
-  width: 19vw;
-  height: fit-content;
+  // max-width: 100%;
+  // height: 45vh;
+  // width: 10vw;
+  // width: 3vh;
+  // width: auto;
+  // height: auto;
+  // width: 19vw;
+  // height: fit-content;
   // width: 10vw;
   opacity: 60%;
   border-radius: 0em 0em 22.5em 35em;
@@ -178,27 +166,58 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 }
 
 .jumbotron__description {
-  margin: 2em;
+  justify-content: center;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
   display: flex;
   flex-direction: column;
 }
 
 .jumbotron__description--sec1 {
-  align-self: flex-start;
-  font-size: 3vh;
+  font-size: 3vw;
   font-weight: 900;
-  margin-top: 0;
+  margin-top: 3vh;
 }
 
 .jumbotron__description--sec2 {
   // margin-left: 0.5em;
-  font-size: 1.8vh;
+  font-size: 1.8vw;
   font-weight: 700;
   margin-top: 0em;
-  align-self: flex-start;
 }
 
 .jumbotron__description--sec3 {
-  font-size: 1.6vh;
+  font-size: 1.8vw;
   margin-top: 0;
+}
+
+@media only screen and (max-width: 575px) {
+  html {
+    height: 100%;
+    // overflow: visible; /* Remove this */
+  }
+  .sec-1 {
+    flex-direction: column;
+  }
+
+  .jumbotron__description {
+    margin-bottom: 10vh;
+  }
+
+  .jumbotron__description--sec1 {
+    font-size: 5vw;
+  }
+
+  .jumbotron__description--sec2 {
+    // margin-left: 0.5em;
+    font-size: 2.8vw;
+  }
+
+  .jumbotron__description--sec3 {
+    font-size: 2.5vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
 }
