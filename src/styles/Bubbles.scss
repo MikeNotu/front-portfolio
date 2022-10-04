@@ -1,14 +1,9 @@
 body {
-  height: 150vh !important;
+  height: 150vh;
 }
 .bubble-container {
   margin-top: 100vh;
   position: fixed;
-  // display: flex;
-  // justify-self: center;
-  // align-self: center;
-  // align-items: center;
-  // margin: auto;
   z-index: -1;
 }
 .jumbotron {
@@ -17,8 +12,7 @@ body {
   align-self: flex-start;
   display: flex;
   text-align: center;
-  // margin-left: 35em;
-  // background-color: rgba(182, 232, 228, 0.8);
+
   background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,
