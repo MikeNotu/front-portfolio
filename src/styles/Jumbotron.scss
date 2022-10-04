@@ -1,0 +1,110 @@
+.jumbotron {
+  margin-left: 2em;
+  margin-right: 2em;
+  align-self: flex-start;
+  display: flex;
+  text-align: center;
+  // margin-left: 35em;
+  // background-color: rgba(182, 232, 228, 0.8);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(9, 9, 121, 0.186734068627451) 17%,
+    rgba(0, 212, 255, 0.3604035364145658) 100%
+  );
+  // width: 60vw;
+  // height: 45vh;
+  border-radius: 15em 15em 15em 15em;
+  // border-style: solid;
+  // border-width: 0.5em;
+  box-shadow: 2em 2em 2em 2em;
+  z-index: 1;
+  box-shadow: 0.3em 0.3em 1em rgb(140, 140, 140);
+}
+
+.center-image {
+  display: flex;
+  justify-content: center;
+}
+
+.my-image {
+  display: flex;
+  opacity: 60%;
+  align-self: center;
+}
+
+.jumbotron__description {
+  justify-content: center;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  margin-left: 3vw;
+  margin-right: 4vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotron__description--sec1 {
+  font-size: 2.8vw;
+  font-weight: 900;
+  margin-top: 4vh;
+}
+
+.jumbotron__description--sec2 {
+  // margin-left: 0.5em;
+  font-size: 1.8vw;
+  font-weight: 700;
+  margin-top: 0em;
+}
+
+.jumbotron__description--icons {
+  // margin-left: 0.5em;
+  font-size: 3vw;
+  font-weight: 700;
+  margin-top: 0em;
+}
+
+.jumbotron__description--sec3 {
+  font-size: 1.6vw;
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 575px) {
+  html {
+    height: 100%;
+    // overflow: visible; /* Remove this */
+  }
+  .sec-1 {
+    flex-direction: column;
+  }
+
+  .jumbotron__description {
+    margin-bottom: 10vh;
+  }
+
+  .jumbotron__description--sec1 {
+    font-size: 5vw;
+  }
+
+  .jumbotron__description--sec2 {
+    // margin-left: 0.5em;
+    font-size: 2.8vw;
+  }
+
+  .jumbotron__description--icons {
+    // margin-left: 0.5em;
+    font-size: 5vw;
+    font-weight: 700;
+    margin-top: 0em;
+  }
+
+  .jumbotron__description--sec3 {
+    font-size: 2.5vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+
+  .my-image {
+    margin-top: 2em;
+  }
+}
