@@ -145,23 +145,15 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
   box-shadow: 0.3em 0.3em 1em rgb(140, 140, 140);
 }
 
-.man {
-  // width: 150vh;
-  // height: 45vh;
-  // height: auto;
+.center-image {
+  display: flex;
+  justify-content: center;
+}
 
-  // height: auto;
-  // max-width: 100%;
-  // height: 45vh;
-  // width: 10vw;
-  // width: 3vh;
-  // width: auto;
-  // height: auto;
-  // width: 19vw;
-  // height: fit-content;
-  // width: 10vw;
+.my-image {
+  display: flex;
   opacity: 60%;
-  border-radius: 0em 0em 22.5em 35em;
+  border-radius: 10em;
   align-self: center;
 }
 
@@ -176,7 +168,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
 }
 
 .jumbotron__description--sec1 {
-  font-size: 3vw;
+  font-size: 2.8vw;
   font-weight: 900;
   margin-top: 4vh;
 }
@@ -188,8 +180,15 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
   margin-top: 0em;
 }
 
+.jumbotron__description--icons {
+  // margin-left: 0.5em;
+  font-size: 3vw;
+  font-weight: 700;
+  margin-top: 0em;
+}
+
 .jumbotron__description--sec3 {
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   margin-top: 0;
 }
 
@@ -215,9 +214,20 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
     font-size: 2.8vw;
   }
 
+  .jumbotron__description--icons {
+    // margin-left: 0.5em;
+    font-size: 5vw;
+    font-weight: 700;
+    margin-top: 0em;
+  }
+
   .jumbotron__description--sec3 {
     font-size: 2.5vw;
     margin-left: 15vw;
     margin-right: 15vw;
+  }
+
+  .my-image {
+    margin-top: 2em;
   }
 }
