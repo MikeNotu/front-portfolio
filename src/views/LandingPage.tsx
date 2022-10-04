@@ -1,6 +1,6 @@
 import "../styles/LandingPage.scss";
-import Img_Man from "../media/Man.png";
-import Img_Mike from "../media/Mike.png";
+// import Img_Man from "../media/Man.png";
+import Img_Mike from "../media/Mike2022ImageGray.png";
 
 const LandingPage = () => {
   return (
@@ -43,7 +43,7 @@ const LandingPage = () => {
                 <div className="row">
                   <div className="col-sm">
                     <img
-                      src={Img_Man}
+                      src={Img_Mike}
                       className="img-fluid man"
                       alt="Responsive image"
                     ></img>
@@ -54,8 +54,8 @@ const LandingPage = () => {
                     </p>
                     <p className="jumbotron__description--sec2">{`React & React Native Developer`}</p>
                     <p className="jumbotron__description--sec3">
-                      I'm a Software Engineering, specialized in FrontEnd
-                      Development.
+                      {`I'm a Software Engineering, specialized in FrontEnd
+                      Development (React & React Native).`}
                     </p>
                     <p className="jumbotron__description--sec3">
                       I'm always happy and willing to learn any technology
