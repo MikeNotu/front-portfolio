@@ -27,11 +27,11 @@ interface Ipages {
 const pages: Ipages[] = [
   {
     name: "Index",
-    icon: <HomeIcon sx={{ marginBottom: "-0.25em" }} />,
+    icon: <HomeIcon sx={{ marginTop: "-0.2em" }} />,
   },
   {
     name: "Projects",
-    icon: <EngineeringIcon sx={{ marginBottom: "-0.25em" }} />,
+    icon: <EngineeringIcon sx={{ marginTop: "-0.2em" }} />,
   },
 ];
 // const pages = ["Index", "Test", "Cards", "Blog"];
