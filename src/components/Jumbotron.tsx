@@ -18,6 +18,7 @@ const Jumbotron: React.FC = () => {
               src={Img_Mike}
               className="img-fluid my-image"
               alt="MikeBateman"
+              style={{ borderRadius: "17em" }}
             ></img>
           </div>
           <div className="col-sm jumbotron__description">
