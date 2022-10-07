@@ -1,4 +1,5 @@
 .jumbotron {
+  width: 48vw;
   margin-left: 2em;
   margin-right: 2em;
   align-self: flex-start;
@@ -46,27 +47,27 @@
 }
 
 .jumbotron__description--sec1 {
-  font-size: 2.8vw;
+  font-size: 2vw;
   font-weight: 900;
   margin-top: 4vh;
 }
 
 .jumbotron__description--sec2 {
   // margin-left: 0.5em;
-  font-size: 1.8vw;
+  font-size: 1.2vw;
   font-weight: 700;
   margin-top: 0em;
 }
 
 .jumbotron__description--icons {
   // margin-left: 0.5em;
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 700;
   margin-top: 0em;
 }
 
 .jumbotron__description--sec3 {
-  font-size: 1.6vw;
+  font-size: 1vw;
   margin-top: 0;
 }
 
