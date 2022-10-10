@@ -30,6 +30,10 @@ const Jumbotron: React.FC = () => {
               {`I'm a Software Engineering, specialized in FrontEnd
         Development (React & React Native).`}
             </p>
+            <p className="jumbotron__description--sec2">
+              I'm always happy and willing to learn any technology that's needed
+              for a project.
+            </p>
             <p className="jumbotron__description--icons">
               <FaReact
                 style={{
@@ -89,11 +93,6 @@ const Jumbotron: React.FC = () => {
                   borderColor: "#3E2C00",
                 }}
               />
-            </p>
-
-            <p className="jumbotron__description--sec2">
-              I'm always happy and willing to learn any technology that's needed
-              for a project.
             </p>
           </div>
         </div>

@@ -6,29 +6,6 @@ body {
   position: fixed;
   z-index: -1;
 }
-.jumbotron {
-  margin-left: 2em;
-  margin-right: 2em;
-  align-self: flex-start;
-  display: flex;
-  text-align: center;
-
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(9, 9, 121, 0.186734068627451) 17%,
-    rgba(0, 212, 255, 0.3604035364145658) 100%
-  );
-  // width: 60vw;
-  // height: 45vh;
-  border-radius: 15em 15em 15em 15em;
-  // border-style: solid;
-  // border-width: 0.5em;
-  box-shadow: 2em 2em 2em 2em;
-  z-index: 1;
-  box-shadow: 0.3em 0.3em 1em rgb(140, 140, 140);
-}
 
 $bubble-count: 50;
 $sway-type: "sway-left-to-right", "sway-right-to-left";
