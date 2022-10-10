@@ -1,11 +1,16 @@
 body {
   margin: 0;
-  // font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// * {
+//   border-style: solid;
+//   border-width: 1px;
+//   border-color: red;
+// }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

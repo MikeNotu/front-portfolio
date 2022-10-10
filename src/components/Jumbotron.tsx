@@ -12,6 +12,10 @@ const Jumbotron: React.FC = () => {
   return (
     <div className="jumbotron">
       <div className="container">
+        <p className="jumbotron__description--title">Michael Bateman</p>
+        <p className="jumbotron__description--sec1">
+          {`React & React Native Developer`}
+        </p>
         <div className="row">
           <div className="col-sm center-image">
             <img
@@ -22,9 +26,9 @@ const Jumbotron: React.FC = () => {
             ></img>
           </div>
           <div className="col-sm jumbotron__description">
-            <p className="jumbotron__description--sec1">Michael Bateman</p>
             <p className="jumbotron__description--sec2">
-              {`React & React Native Developer`}
+              {`I'm a Software Engineering, specialized in FrontEnd
+        Development (React & React Native).`}
             </p>
             <p className="jumbotron__description--icons">
               <FaReact
@@ -86,11 +90,8 @@ const Jumbotron: React.FC = () => {
                 }}
               />
             </p>
-            <p className="jumbotron__description--sec3">
-              {`I'm a Software Engineering, specialized in FrontEnd
-        Development (React & React Native).`}
-            </p>
-            <p className="jumbotron__description--sec3">
+
+            <p className="jumbotron__description--sec2">
               I'm always happy and willing to learn any technology that's needed
               for a project.
             </p>
