@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/front-portfolio/static/css/main.d2bab7cc.css",
-    "main.js": "/front-portfolio/static/js/main.e4f065ed.js",
+    "main.css": "/front-portfolio/static/css/main.6b6e2f05.css",
+    "main.js": "/front-portfolio/static/js/main.0f602412.js",
     "static/js/787.ef3a7dc4.chunk.js": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js",
     "static/media/Mike2022ImageGray.png": "/front-portfolio/static/media/Mike2022ImageGray.df38f30c2d1ae4505a4d.png",
     "static/media/ReduxTestingHocs.jpg": "/front-portfolio/static/media/ReduxTestingHocs.1a01134ac1f0d192e1ac.jpg",
@@ -12,12 +12,12 @@
     "static/media/GitHub.jpg": "/front-portfolio/static/media/GitHub.e4bf312203a0f6f2f5eb.jpg",
     "static/media/AndroidApp.jpg": "/front-portfolio/static/media/AndroidApp.ba949d2154144bdc56f2.jpg",
     "index.html": "/front-portfolio/index.html",
-    "main.d2bab7cc.css.map": "/front-portfolio/static/css/main.d2bab7cc.css.map",
-    "main.e4f065ed.js.map": "/front-portfolio/static/js/main.e4f065ed.js.map",
+    "main.6b6e2f05.css.map": "/front-portfolio/static/css/main.6b6e2f05.css.map",
+    "main.0f602412.js.map": "/front-portfolio/static/js/main.0f602412.js.map",
     "787.ef3a7dc4.chunk.js.map": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2bab7cc.css",
-    "static/js/main.e4f065ed.js"
+    "static/css/main.6b6e2f05.css",
+    "static/js/main.0f602412.js"
   ]
 }
