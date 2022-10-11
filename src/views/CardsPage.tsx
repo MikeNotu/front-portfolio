@@ -92,14 +92,14 @@ const DATA: Data[] = [
 
 const CardsPage: React.FC = () => {
   return (
-    <div>
+    <div style={{ paddingBlock: "2em" }}>
       <div>
         <h1 style={{ display: "flex", justifyContent: "center" }}>
-          This are some of my Personal Projects.
+          Personal Projects
         </h1>
       </div>
       <Cards DATA={DATA} />
-      <br />
+      {/* <br /> */}
     </div>
   );
 };
