@@ -95,10 +95,11 @@ const CardsPage: React.FC = () => {
     <div>
       <div>
         <h1 style={{ display: "flex", justifyContent: "center" }}>
-          This website is a Porfolio of some of my Personal Projects.
+          This are some of my Personal Projects.
         </h1>
       </div>
       <Cards DATA={DATA} />
+      <br />
     </div>
   );
 };

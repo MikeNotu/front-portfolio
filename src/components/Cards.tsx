@@ -31,7 +31,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-const Cards = ({ DATA: DATA }: { DATA: Data[] }) => {
+const Cards = ({ DATA }: { DATA: Data[] }) => {
   const [expanded, setExpanded] = React.useState([false, false]);
 
   const handleExpandClick = (index: number) => {
