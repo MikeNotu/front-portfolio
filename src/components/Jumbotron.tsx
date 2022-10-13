@@ -27,7 +27,7 @@ const Jumbotron: React.FC = () => {
           </div>
           <div className="col-sm jumbotron__description">
             <p className="jumbotron__description--sec2">
-              {`I'm a Software Engineering, specialized in FrontEnd
+              {`I'm a Software Engineer, specialized in FrontEnd
         Development (React & React Native).`}
             </p>
             <p className="jumbotron__description--sec2">
