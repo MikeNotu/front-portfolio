@@ -6,6 +6,7 @@ import Img_NeuralNetwork from "../media/NeuralNetwork.jpg";
 import Img_GitHub from "../media/GitHub.jpg";
 import Img_ReduxTestingHocs from "../media/ReduxTestingHocs.jpg";
 import Img_TypescriptWebsite from "../media/TypescriptWebsite.jpg";
+import Img_Leetcode from "../media/Leetcode.jpg";
 
 export interface Data {
   title: string;
@@ -18,6 +19,16 @@ export interface Data {
 }
 
 const DATA: Data[] = [
+  {
+    title: "Visual Leet",
+    date: "Oct 12, 2022",
+    technologies: "React, Javascript, CSS, HTML, Git & GitHub ",
+    long_description: "Project to visually showcase Leetcode Excercises.",
+    url: "https://mikenotu.github.io/visual-leet/",
+    image: Img_Leetcode,
+    repository: "https://github.com/MikeNotu/visual-leet",
+  },
+
   {
     title: "In Depth TypeScript",
     date: "Sep 27, 2022",
