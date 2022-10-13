@@ -1,6 +1,4 @@
-// import MyName from "./components/MyName/MyName";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import TestComponent from "./components/TestComponent";
 import Navbar from "./components/Navbar";
 import LandingPage from "./views/LandingPage";
 import CardsPage from "./views/CardsPage";
@@ -16,12 +14,9 @@ const App = () => {
               exact
               path={["/", "/front-portfolio", "/front-portfolio/Index"]}
             >
-              {/* <CardsPage /> */}
               <LandingPage />
             </Route>
-            <Route exact path="/front-portfolio/Test">
-              <TestComponent />
-            </Route>
+
             <Route exact path="/front-portfolio/Projects">
               <CardsPage />
             </Route>
