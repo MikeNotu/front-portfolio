@@ -110,7 +110,6 @@ const CardsPage: React.FC = () => {
         </h1>
       </div>
       <Cards DATA={DATA} />
-      {/* <br /> */}
     </div>
   );
 };
