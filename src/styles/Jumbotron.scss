@@ -69,6 +69,18 @@
   margin-top: 0;
 }
 
+@media only screen and (max-width: 847px) {
+  .jumbotron__description--title {
+    margin-top: 2vh;
+    font-size: 2.5vw;
+  }
+  .jumbotron__description--icons {
+    font-size: 3.5vw;
+    margin-right: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+
 @media only screen and (max-width: 575px) {
   html {
     height: 100%;
@@ -89,6 +101,7 @@
   }
 
   .jumbotron__description--title {
+    margin-top: 4vh;
     font-size: 5vw;
   }
 
@@ -98,7 +111,6 @@
   }
 
   .jumbotron__description--icons {
-    // margin-left: 0.5em;
     font-size: 5vw;
     font-weight: 700;
     margin-top: 0em;
@@ -112,15 +124,5 @@
 
   .my-image {
     margin-top: 2em;
-  }
-}
-
-@media only screen and (max-width: 847px) {
-  .jumbotron__description--title {
-    margin-top: 2vh;
-    font-size: 2.5vw;
-  }
-  .jumbotron__description--icons {
-    font-size: 4vw;
   }
 }
