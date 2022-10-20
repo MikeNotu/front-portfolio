@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/front-portfolio/static/css/main.afac6993.css",
+    "main.css": "/front-portfolio/static/css/main.66aceac6.css",
     "main.js": "/front-portfolio/static/js/main.d0f9cd11.js",
     "static/js/787.ef3a7dc4.chunk.js": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js",
     "static/media/Mike2022ImageGray.png": "/front-portfolio/static/media/Mike2022ImageGray.df38f30c2d1ae4505a4d.png",
@@ -13,12 +13,12 @@
     "static/media/GitHub.jpg": "/front-portfolio/static/media/GitHub.e4bf312203a0f6f2f5eb.jpg",
     "static/media/AndroidApp.jpg": "/front-portfolio/static/media/AndroidApp.ba949d2154144bdc56f2.jpg",
     "index.html": "/front-portfolio/index.html",
-    "main.afac6993.css.map": "/front-portfolio/static/css/main.afac6993.css.map",
+    "main.66aceac6.css.map": "/front-portfolio/static/css/main.66aceac6.css.map",
     "main.d0f9cd11.js.map": "/front-portfolio/static/js/main.d0f9cd11.js.map",
     "787.ef3a7dc4.chunk.js.map": "/front-portfolio/static/js/787.ef3a7dc4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afac6993.css",
+    "static/css/main.66aceac6.css",
     "static/js/main.d0f9cd11.js"
   ]
 }
