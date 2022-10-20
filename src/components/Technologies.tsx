@@ -60,6 +60,7 @@ const Technologies: React.FC = () => {
         {DATA.map((data) => {
           return (
             <Link
+              key={data.name}
               style={{
                 textDecoration: "none",
                 display: "flex",
