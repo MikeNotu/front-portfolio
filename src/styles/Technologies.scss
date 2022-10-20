@@ -5,7 +5,7 @@
   background-color: #8bc6ec;
   background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
 
-  width: 20em;
+  width: 25em;
   border-radius: 2em 2em 2em 2em;
   margin-right: 2em;
   box-shadow: 2em 2em 2em 2em;
@@ -28,9 +28,19 @@
 }
 
 .technologies__description--sec2 {
+  display: flex;
   font-size: 1.2vw;
+  padding: 1vh;
+  margin-bottom: 1vh;
+  background-color: #a1e7fd2c;
+  border-radius: 1em;
+  text-decoration: none;
+  list-style-type: none;
 }
 
+.technologies__description--sec2:hover {
+  background-color: #a1fdf765;
+}
 @media only screen and (max-width: 575px) {
   .technologies__description--sec1 {
     font-size: 3vw;

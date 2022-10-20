@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import LandingPage from "./views/LandingPage";
 import CardsPage from "./views/CardsPage";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Router>
       <div>

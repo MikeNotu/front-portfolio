@@ -1,39 +1,79 @@
+import { Link } from "react-router-dom";
 import "../styles/Technologies.scss";
 
-const Technologies = () => {
+const Technologies: React.FC = () => {
+  interface Data {
+    name: string;
+    url: string;
+  }
+
+  const DATA: Data[] = [
+    {
+      name: "React & React Native",
+      url: "https://github.com/MikeNotu/front-portfolio/blob/master/src/views/LandingPage.tsx",
+    },
+    {
+      name: "Hooks",
+      url: "https://github.com/MikeNotu/chess-champions/blob/master/src/components/Challenge.js",
+    },
+    {
+      name: "Typescript",
+      url: "https://github.com/MikeNotu/front-portfolio/blob/master/src/components/Navbar.tsx",
+    },
+    {
+      name: "HTML",
+      url: "https://github.com/MikeNotu/Bateman/blob/master/index.html",
+    },
+    {
+      name: "CSS (Bootstrap, Flexbox, SCSS, BEM , Styled Components & Atomic Design)",
+      url: "https://github.com/MikeNotu/front-portfolio/blob/master/src/styles/Technologies.scss",
+    },
+    {
+      name: "Javascript (ES5 & ES6)",
+      url: "https://github.com/MikeNotu/visual-leet/blob/master/src/components/Leet0001TwoSum.js",
+    },
+    {
+      name: "Git & GitHub",
+      url: "https://github.com/MikeNotu",
+    },
+    {
+      name: "State Management (Redux & React Context)",
+      url: "https://codesandbox.io/s/t3w0i?file=/src/client/views/ReduxPractice.tsx",
+    },
+    {
+      name: "React Testing Library & Jest",
+      url: "https://codesandbox.io/s/t3w0i?file=/src/__tests__/testing2.test.js",
+    },
+    {
+      name: "Material UI (MUI), i18next, AsyncStorage & NetInfo",
+      url: "https://github.com/MikeNotu/front-portfolio/blob/master/src/components/Navbar.tsx",
+    },
+  ];
+
   return (
     <div className="technologies">
       <ul className="technologies__description">
         <p className="technologies__description--sec1">
           Technologies I've used
         </p>
-        <li className="technologies__description--sec2">React</li>
-        <li className="technologies__description--sec2">React Native</li>
-        <li className="technologies__description--sec2">Hooks</li>
-        <li className="technologies__description--sec2">Typescript</li>
-        <li className="technologies__description--sec2">HTML</li>
-        <li className="technologies__description--sec2">
-          CSS (Bootstrap, Flexbox, SCSS, BEM, )
-        </li>
-        <li className="technologies__description--sec2">
-          Javascript (ES5 &#38; ES6)
-        </li>
-        <li className="technologies__description--sec2">Git &#38; GitHub</li>
-        <li className="technologies__description--sec2">
-          State Management (Redux &#38; React Context)
-        </li>
-        <li className="technologies__description--sec2">i18next</li>
-        <li className="technologies__description--sec2">AsyncStorage</li>
-        <li className="technologies__description--sec2">NetInfo</li>
-        <li className="technologies__description--sec2">Agile &#38; SCRUM</li>
-        <li className="technologies__description--sec2">
-          React Testing Library &#38; Jest
-        </li>
-        <li className="technologies__description--sec2">i18next</li>
-        <li className="technologies__description--sec2">Material UI (MUI)</li>
-        <li className="technologies__description--sec2">Atomic Design</li>
 
-        <li className="technologies__description--sec2">Styled Components</li>
+        {DATA.map((data) => {
+          return (
+            <Link
+              style={{
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+              to={{
+                pathname: data.url,
+              }}
+              target="_blank"
+            >
+              <li className="technologies__description--sec2">{data.name}</li>
+            </Link>
+          );
+        })}
       </ul>
     </div>
   );

@@ -34,7 +34,6 @@ const pages: Ipages[] = [
     icon: <EngineeringIcon sx={{ marginTop: "-0.2em" }} />,
   },
 ];
-// const pages = ["Index", "Test", "Cards", "Blog"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -203,7 +202,7 @@ const ResponsiveAppBar = () => {
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
-              justifyContent: "flex-end",
+              justifyContent: "center",
             }}
           >
             {pages.map((page) => (
