@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import HomeIcon from "@mui/icons-material/Home";
 import EngineeringIcon from "@mui/icons-material/Engineering";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { Link } from "react-router-dom";
 import { COLORS } from "../constants";
 
@@ -32,6 +33,10 @@ const pages: Ipages[] = [
   {
     name: "Projects",
     icon: <EngineeringIcon sx={{ marginTop: "-0.2em" }} />,
+  },
+  {
+    name: "This Repository",
+    icon: <GitHubIcon sx={{ marginTop: "-0.2em" }} />,
   },
 ];
 
@@ -174,27 +179,52 @@ const ResponsiveAppBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <Link
-                  key={page.name}
-                  style={{
-                    textDecoration: "none",
-                    color: COLORS.customBlack,
-                  }}
-                  to={`/front-portfolio/${page.name}`}
-                >
-                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                    <Typography
-                      style={{
-                        fontFamily: "Segoe UI, Arial, sansSerif",
-                      }}
-                      textAlign="center"
-                    >
-                      {page.name}
-                    </Typography>
-                  </MenuItem>
-                </Link>
-              ))}
+              {pages.map((page) =>
+                page.name === "This Repository" ? (
+                  <Link
+                    key={page.name}
+                    style={{
+                      textDecoration: "none",
+                      color: COLORS.customBlack,
+                    }}
+                    to={{
+                      pathname: "https://github.com/MikeNotu/front-portfolio",
+                    }}
+                    target="_blank"
+                  >
+                    <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                      <Typography
+                        style={{
+                          fontFamily: "Segoe UI, Arial, sansSerif",
+                        }}
+                        textAlign="center"
+                      >
+                        {page.name}
+                      </Typography>
+                    </MenuItem>
+                  </Link>
+                ) : (
+                  <Link
+                    key={page.name}
+                    style={{
+                      textDecoration: "none",
+                      color: COLORS.customBlack,
+                    }}
+                    to={`/front-portfolio/${page.name}`}
+                  >
+                    <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                      <Typography
+                        style={{
+                          fontFamily: "Segoe UI, Arial, sansSerif",
+                        }}
+                        textAlign="center"
+                      >
+                        {page.name}
+                      </Typography>
+                    </MenuItem>
+                  </Link>
+                )
+              )}
             </Menu>
           </Box>
 
@@ -205,30 +235,58 @@ const ResponsiveAppBar = () => {
               justifyContent: "center",
             }}
           >
-            {pages.map((page) => (
-              <Link
-                key={page.name}
-                style={{
-                  textDecoration: "none",
-                }}
-                to={`/front-portfolio/${page.name}`}
-              >
-                <Button
+            {pages.map((page) =>
+              page.name === "This Repository" ? (
+                <Link
                   key={page.name}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
-                    mr: 2,
-                    color: COLORS.customWhite,
-                    display: "block",
-                    fontFamily: "Segoe UI, Arial, sansSerif",
+                  style={{
+                    textDecoration: "none",
                   }}
+                  to={{
+                    pathname: "https://github.com/MikeNotu/front-portfolio",
+                  }}
+                  target="_blank"
                 >
-                  {page.name}
-                  {page.icon}
-                </Button>
-              </Link>
-            ))}
+                  <Button
+                    key={page.name}
+                    onClick={handleCloseNavMenu}
+                    sx={{
+                      my: 2,
+                      mr: 2,
+                      color: COLORS.customWhite,
+                      display: "block",
+                      fontFamily: "Segoe UI, Arial, sansSerif",
+                    }}
+                  >
+                    {page.name}
+                    {page.icon}
+                  </Button>
+                </Link>
+              ) : (
+                <Link
+                  key={page.name}
+                  style={{
+                    textDecoration: "none",
+                  }}
+                  to={`/front-portfolio/${page.name}`}
+                >
+                  <Button
+                    key={page.name}
+                    onClick={handleCloseNavMenu}
+                    sx={{
+                      my: 2,
+                      mr: 2,
+                      color: COLORS.customWhite,
+                      display: "block",
+                      fontFamily: "Segoe UI, Arial, sansSerif",
+                    }}
+                  >
+                    {page.name}
+                    {page.icon}
+                  </Button>
+                </Link>
+              )
+            )}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
