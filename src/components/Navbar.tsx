@@ -63,6 +63,8 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
+  const ThisRepository = "https://github.com/MikeNotu/front-portfolio";
+
   return (
     <AppBar
       position="static"
@@ -188,7 +190,7 @@ const ResponsiveAppBar = () => {
                       color: COLORS.customBlack,
                     }}
                     to={{
-                      pathname: "https://github.com/MikeNotu/front-portfolio",
+                      pathname: ThisRepository,
                     }}
                     target="_blank"
                   >
@@ -243,7 +245,7 @@ const ResponsiveAppBar = () => {
                     textDecoration: "none",
                   }}
                   to={{
-                    pathname: "https://github.com/MikeNotu/front-portfolio",
+                    pathname: ThisRepository,
                   }}
                   target="_blank"
                 >
